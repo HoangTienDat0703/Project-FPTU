@@ -51,7 +51,7 @@ public class FOSUserController {
                 fosUser.setPassword(bcryptEncoder.encode(fosUser.getPassword()));
                 FOSUser fosUserAdd = ifosUserService.addFOSUser(fosUser);
                 return ResponseEntity.status(HttpStatus.OK).body(
-                            new ResponseObject("ok", "successfull",true, fosUserAdd)
+                            new ResponseObject("ok", "successfully",true, fosUserAdd)
                     );
             }
             return  responseEntity;
